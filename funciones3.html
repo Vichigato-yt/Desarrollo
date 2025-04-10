@@ -1,0 +1,192 @@
+<!--Problema 1.
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        //Confeccionar una función a la cual le envíe tres enteros 
+        //y retorne el mayor de ellos.
+
+        function retornarMayor(x1, x2, x3) {
+            if (x1 > x2 && x1 > x3) {
+                return x1;
+            } else {
+                if (x2 > x3) {
+                    return x2;
+                } else {
+                    return x3;
+                }
+            }
+        }
+
+        let valor1 = parseInt(prompt('Ingrese primer valor:'));
+        let valor2 = parseInt(prompt('Ingrese segundo valor:'));
+        let valor3 = parseInt(prompt('Ingrese tercer valor:'));
+        document.write('Los tres valores ingresados son ' + valor1 + ' ' + valor2 + ' ' + valor3 + '<br>');
+        let may = retornarMayor(valor1, valor2, valor3);
+        document.write('El mayor de los tres es :' + may);
+    </script>
+
+</body>
+
+</html>     
+
+
+
+Problema 2.
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        //Elaborar una función a la cual le envíe el valor del lado de un cuadrado 
+        //y me retorne su perímetro.
+
+        function retornarPerimetro(lado) {
+            let perimetro;
+            perimetro = lado * 4;
+            return perimetro;
+        }
+
+        let lado = parseInt(prompt('Ingrese la medida del lado de un cuadrado:'));
+        document.write('El perímetro del cuadrado es:' + retornarPerimetro(lado));
+    </script>
+
+</body>
+
+</html>     
+
+
+Problema 3.
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        //Desarrollar una función que retorne la cantidad de dígitos 
+        //que tiene una variable entera positiva de hasta 5 dígitos.
+
+        function cantidadDigitos(x) {
+            if (x < 10) {
+                return 1;
+            } else {
+                if (x < 100) {
+                    return 2;
+                } else {
+                    if (x < 1000) {
+                        return 3;
+                    } else {
+                        if (x < 10000) {
+                            return 4;
+                        } else {
+                            if (x < 100000) {
+                                return 5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        let valor = parseInt(prompt('Ingrese un valor positivo de hasta 5 dígitos:'));
+        document.write('La cantidad de dígitos del valor ingresado es:' + cantidadDigitos(valor));
+    </script>
+
+</body>
+
+</html>
+
+
+
+Problema 4.
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        //Elaborar una función que reciba tres enteros y retorne el promedio.
+
+        function promediar(x1, x2, x3) {
+            let promedio = (x1 + x2 + x3) / 3;
+            return promedio;
+        }
+
+        let valor1 = parseInt(prompt('Ingrese primer valor:'));
+        let valor2 = parseInt(prompt('Ingrese segundo valor:'));
+        let valor3 = parseInt(prompt('Ingrese tercer valor:'));
+        document.write('Los tres valores ingresados son ' + valor1 + ' ' + valor2 + ' ' + valor3 + '<br>');
+        let pro;
+        pro = promediar(valor1, valor2, valor3);
+        document.write('El promedio es :' + pro);
+    </script>
+
+</body>
+
+</html     
+
+
+
+Problema 5.-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        //Confeccionar una función que solicite la carga de 5 valores por teclado
+        //y retorne su suma.
+
+        function cargar5Valores() {
+            let suma = 0;
+            for (let f = 1; f <= 5; f++) {
+                let valor = parseInt(prompt('Ingrese valor:'));
+                suma = suma + valor;
+            }
+            return suma;
+        }
+
+        let s = cargar5Valores();
+        document.write('La suma de los 5 valores es: ' + s);
+    </script>
+
+</body>
+
+</html>

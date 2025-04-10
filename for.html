@@ -1,0 +1,354 @@
+<!--Problema 1.
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        let conta1 = 0;
+        for (let f = 1; f <= 3; f++) {
+            let base = parseInt(prompt('Ingrese la base:'));
+            let altura = parseInt(prompt('Ingrese la altura:'));
+            let superficie = base * altura / 2;
+            if (superficie > 12) {
+                conta1++;
+            }
+            document.write('Triángulo nro:' + f + '<br>');
+            document.write('Base:' + base + '<br>');
+            document.write('Altura:' + altura + '<br>');
+            document.write('Superficie:' + superficie + '<br>');
+        }
+        document.write('Cantidad de triángulos con superficie mayor a 12:' + conta1);
+    </script>
+
+</body>
+
+</html>
+
+
+
+Problema 2.
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        /* Desarrollar un programa que solicite la carga de 10 números 
+            e imprima la suma de lo últimos 5 valores ingresados.*/
+        let suma = 0;
+        for (let f = 1; f <= 10; f++) {
+            let valor = parseInt(prompt('Ingrese un nro:'));
+            if (f > 5) {
+                suma = suma + valor;
+            }
+        }
+        document.write('La suma de los últimos cinco valores ingresados es:' + suma);
+    </script>
+
+</body>
+
+</html>     
+
+
+
+Problema 3.     
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        //Desarrollar un programa que muestre la tabla de multiplicar del 5 (del 5 al 50)
+        let tabla = 5;
+        for (let f = 1; f <= 10; f++) {
+            document.write(tabla + '-');
+            tabla = tabla + 5;
+        }
+    </script>
+
+</body>
+
+</html>
+     
+
+
+Problema 4.
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        /*Confeccionar un programa que permita ingresar un valor del 1 al 10 y 
+                nos muestre la tabla de multiplicar del mismo (los primeros 12 términos)
+                Ejemplo: Si ingreso 3 deberá aparecer en pantalla los valores 3, 6, 9, hasta el 36.*/
+        let tabla = parseInt(prompt('Ingrese un valor del 1 al 10:', ''));
+        let conta = tabla;
+        for (let f = 1; f <= 12; f++) {
+            document.write(conta + ' ');
+            conta = conta + tabla;
+        }
+    </script>
+
+</body>
+
+</html>     
+
+
+
+Problema 5.
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        /* Realizar un programa que lea los lados de 4 triángulos, e informar:
+                          a)	De cada uno de ellos, qué tipo de triángulo es: 
+                                equilátero (tres lados iguales), isósceles (dos lados iguales), o escaleno (ningún lado igual)
+                          b)	Cantidad de triángulos de cada tipo.
+                          c)	Tipo de triángulo del que hay menor cantidad. */
+
+        let cant1 = 0;
+        let cant2 = 0;
+        let cant3 = 0;
+        for (let f = 1; f <= 4; f++) {
+            let lado1 = parseInt(prompt('Ingrese primer lado:'));
+            let lado2 = parseInt(prompt('Ingrese segundo lado:'));
+            let lado3 = parseInt(prompt('Ingrese tercer lado:'));
+            if (lado1 == lado2 && lado1 == lado3) {
+                document.write('Triángulo equilatero.<br>');
+                cant1++;
+            } else {
+                if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
+                    document.write('Triángulo isósceles.<br>');
+                    cant2++;
+                } else {
+                    document.write('Triángulo escaleno.<br>');
+                    cant3++;
+                }
+            }
+        }
+        document.write('<br>');
+        document.write('Cantidad de triángulos equiláteros:' + cant1 + '<br>');
+        document.write('Cantidad de triángulos isósceles:' + cant2 + '<br>');
+        document.write('Cantidad de triángulos escalenos:' + cant3 + '<br>');
+        if (cant1 < cant2 && cant1 < cant3) {
+            document.write('Se ingresaron menos triángulos equiláteros');
+        } else {
+            if (cant2 < cant3) {
+                document.write('Se ingresaron menos triángulos isósceles');
+            } else {
+                document.write('Se ingresaron menos triángulos escalenos');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
+Problema 6.
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        /*Escribir un programa que pida ingresar coordenadas (x,y) que representan puntos en el plano. 
+                Informar cuántos puntos se han ingresado en el primer, segundo, tercer y cuarto cuadrante. 
+                Al comenzar el programa se pide que se ingrese la cantidad de puntos a procesar.*/
+
+        let cuad1 = 0;
+        let cuad2 = 0;
+        let cuad3 = 0;
+        let cuad4 = 0;
+        let cant = parseInt(prompt('Cuantos puntos procesará:'));
+        cant = parseInt(cant);
+        for (let f = 1; f <= cant; f++) {
+            let x = parseInt(prompt('Ingrese coordenada x:'));
+            let y = parseInt(prompt('Ingrese coordenada y:'));
+            if (x > 0 && y > 0) {
+                cuad1++;
+            } else {
+                if (x < 0 && y > 0) {
+                    cuad2++;
+                } else {
+                    if (x < 0 && y < 0) {
+                        cuad3++;
+                    } else {
+                        if (x > 0 && y < 0) {
+                            cuad4++;
+                        }
+                    }
+                }
+            }
+        }
+        document.write('Cantidad de puntos ingresados en el primer cuadrante:' + cuad1 + '<br>');
+        document.write('Cantidad de puntos ingresados en el segundo cuadrante:' + cuad2 + '<br>');
+        document.write('Cantidad de puntos ingresados en el tercer cuadrante:' + cuad3 + '<br>');
+        document.write('Cantidad de puntos ingresados en el cuarto cuadrante:' + cuad4 + '<br>');
+    </script>
+
+</body>
+
+</html>     
+
+
+
+Problema 7.
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        /*Se realiza la carga de 10 valores enteros por teclado. Se desea conocer:
+                  a)	La cantidad de valores negativos ingresados.
+                  b)	La cantidad de valores positivos ingresados.
+                  c)	La cantidad de múltiplos de 15.
+                  d)	El valor acumulado de los números ingresados que son pares.*/
+
+        let cantnegativos = 0;
+        let cantpositivos = 0;
+        let mult15 = 0;
+        let sumapares = 0;
+        for (let f = 1; f <= 10; f++) {
+            let valor = parseInt(prompt('Ingrese un valor:'));
+            if (valor < 0) {
+                cantnegativos++;
+            } else {
+                if (valor > 0) {
+                    cantpositivos++;
+                }
+            }
+            if (valor % 15 == 0 && valor != 0) {
+                mult15++;
+            }
+            if (valor % 2 == 0) {
+                sumapares = sumapares + valor;
+            }
+        }
+        document.write('Cantidad de valores negativos:' + cantnegativos + '<br>');
+        document.write('Cantidad de valores positivos:' + cantpositivos + '<br>');
+        document.write('Cantidad de múltiplos de 15:' + mult15 + '<br>');
+        document.write('Suma de los valores pares ingresados:' + sumapares + '<br>');
+    </script>
+
+</body>
+
+</html>     
+
+
+
+Problema 8.-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        /*Se cuenta con la siguiente información:
+                  Las edades de 5 estudiantes del turno mañana.
+                  Las edades de 6 estudiantes del turno tarde.
+                  Las edades de 11 estudiantes del turno noche.
+                  Las edades de cada estudiante deben ingresarse por teclado.
+                  a) Obtener el promedio de las edades de cada turno (tres promedios)
+                  b) Imprimir dichos promedios (promedio de cada turno).
+                  c) Mostrar por pantalla un mensaje que indique cual de los 
+                     tres turnos tiene un promedio de edades mayor. */
+
+        let suma1 = 0;
+        for (let f = 1; f <= 5; f++) {
+            let edad = parseInt(prompt('Edad de estudiante del turno mañana:'));
+            suma1 = suma1 + edad;
+        }
+        let suma2 = 0;
+        for (let f = 1; f <= 6; f++) {
+            let edad = parseInt(prompt('Edad de estudiante del turno tarde:'));
+            suma2 = suma2 + edad;
+        }
+        let suma3 = 0;
+        for (let f = 1; f <= 11; f++) {
+            let edad = parseInt(prompt('Edad de estudiante del turno noche:'));
+            suma3 = suma3 + edad;
+        }
+        let promedio1 = suma1 / 5;
+        let promedio2 = suma2 / 6;
+        let promedio3 = suma3 / 11;
+        document.write('Promedio de edades de alumnos del turno mañana:' + promedio1 + '<br>');
+        document.write('Promedio de edades de alumnos del turno tarde:' + promedio2 + '<br>');
+        document.write('Promedio de edades de alumnos del turno noche:' + promedio3 + '<br>');
+        if (promedio1 > promedio2 && promedio1 > promedio3) {
+            document.write('El turno mañana tiene un promedio mayor de edades');
+        } else {
+            if (promedio2 > promedio3) {
+                document.write('El turno tarde tiene un promedio mayor de edades');
+            } else {
+                document.write('El turno noche tiene un promedio mayor de edades');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

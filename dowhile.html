@@ -1,0 +1,132 @@
+<!--Problema 1.
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        let valor;
+        let suma = 0;
+        do {
+            valor = parseInt(prompt('Ingrese un valor (9999 para finalizar)'));
+            if (valor != 9999) {
+                suma = suma + valor;
+            }
+        } while (valor != 9999);
+        document.write('Valor acumulado total:' + suma);
+        document.write('<br>');
+        if (suma > 0) {
+            document.write('El valor acumulado es mayor a cero');
+        } else {
+            if (suma == 0) {
+                document.write('El valor acumulado es cero');
+            } else {
+                document.write('El valor acumulado es menor a cero');
+            }
+        }
+    </script>
+
+</body>
+
+</html>     
+
+
+
+Problema 2.
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        let nrocuenta;
+        let nombre;
+        let saldo = 0;
+        let saldoacre = 0;
+        do {
+            nrocuenta = parseInt(prompt('Ingrese nro de cuenta:'));
+            if (nrocuenta >= 0) {
+                nombre = prompt('Nombre del cliente:');
+                saldo = parseFloat(prompt('Saldo actual:'));
+                if (saldo > 0) {
+                    saldoacre = saldoacre + saldo;
+                    document.write(nombre + ' tiene saldo acreedor<br>');
+                } else {
+                    if (saldo < 0) {
+                        document.write(nombre + ' tiene saldo deudor<br>');
+                    } else {
+                        document.write(nombre + ' tiene saldo nulo<br>');
+                    }
+                }
+
+            }
+        } while (nrocuenta > 0);
+        document.write('Suma total de saldos acreedores:' + saldoacre);
+    </script>
+
+</body>
+
+</html>
+
+
+
+Problema 3.-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        let documento;
+        let edad;
+        let totalpersonas = 0;
+        let cantvarones = 0;
+        let cantmujeres = 0;
+        let cantvaronesgrandes = 0;
+        do {
+            documento = parseInt(prompt('Ingrese nro de documento (0 para finalizar):'));
+            if (documento > 0) {
+                edad = parseInt(prompt('Ingrese la edad:'));
+                sexo = prompt('Ingrese el sexo (masculino/femenino):');
+                if (sexo == 'masculino') {
+                    cantvarones = cantvarones + 1;
+                    if (edad >= 16 && edad <= 65) {
+                        cantvaronesgrandes = cantvaronesgrandes + 1;
+                    }
+                }
+                if (sexo == 'femenino') {
+                    cantmujeres = cantmujeres + 1;
+                }
+                totalpersonas = totalpersonas + 1;
+            }
+        } while (documento != 0);
+        document.write('Total de personas censadas: ' + totalpersonas + '<br>');
+        document.write('Cantidad de varones: ' + cantvarones + '<br>');
+        document.write('Cantidad de mujeres: ' + cantmujeres + '<br>');
+        document.write('Cantidad de varones entre 16 y 65 años: ' + cantvaronesgrandes + '<br>');
+    </script>
+
+</body>
+
+</html>
