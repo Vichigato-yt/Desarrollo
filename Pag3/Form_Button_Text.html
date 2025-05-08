@@ -1,0 +1,102 @@
+<!--Problema 1.
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <form>
+        <p>Ingrese un valor:<input type="text" id="num"></p>
+        <p><input type="button" value="Calcular cubo" onClick="calcularCubo()"></p>
+    </form>
+
+    <script>
+        function calcularCubo() {
+            let v = document.getElementById('num').value;
+            v = parseInt(v);
+            let cubo = v * v * v;
+            alert(cubo);
+        }
+    </script>
+
+</body>
+
+</html>     
+
+
+
+Problema 2.
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <form>
+        <p>Ingrese primer valor:
+            <input type="text" id="num1"></p>
+        <p>Ingrese segundo valor:
+            <input type="text" id="num2"></p>
+        <p><input type="button" value="mostrar mayor" onClick="mostrarMayor()"></p>
+    </form>
+
+    <script>
+        function mostrarMayor() {
+            let num1 = parseInt(document.getElementById('num1').value);
+            let num2 = parseInt(document.getElementById('num2').value);
+            if (num1 > num2) {
+                alert('El manor es ' + num1);
+            } else {
+                alert('El manor es ' + num2);
+            }
+        }
+    </script>
+
+</body>
+
+</html>     
+
+
+Problema 3.-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <form>
+        <p>Ingrese nombre:<input type="text" id="nombre"></p>
+        <p>Ingrese apellido:<input type="text" id="apellido"></p>
+        <p><input type="button" value="Concatenar datos ingresados" onClick="concatenar()"></p>
+        <p><input type="text" id="resultado"></p>
+    </form>
+
+    <script>
+        function concatenar() {
+            let nom = document.getElementById('nombre').value;
+            let ape = document.getElementById('apellido').value;
+            document.getElementById('resultado').value = nom + ape;
+        }
+    </script>
+
+</body>
+
+</html>
