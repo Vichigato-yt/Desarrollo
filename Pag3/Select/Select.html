@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios con Select</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Ejercicios con Select</h1>
+
+    <label for="problema">Selecciona un problema:</label>
+    <select id="problema">
+      <option value="">-- Selecciona --</option>
+      <option value="problema1">Pizza y Precio</option>
+      <option value="problema2">Presupuesto de Computadora</option>
+      <option value="problema3">Examen Múltiple Choice</option>
+    </select>
+
+    <div id="enunciado" class="card"></div>
+
+    <div id="contenido"></div>
+
+    <button id="ejecutar">Ejecutar</button>
+
+    <div id="resultado" class="card"></div>
+  </div>
+<script src="script.js"></script>
+</body>
+
+</html>

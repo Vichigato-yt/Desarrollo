@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicios con Inputs y Botones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Ejercicios Interactivos con JavaScript</h1>
+
+    <!-- Problema 1 -->
+    <div class="card">
+      <h2>Problema 1</h2>
+      <p>Crear un programa que permita cargar un entero en un campo de texto y al presionar un botón nos muestre dicho valor elevado al cubo (emplear la función alert).</p>
+      <input type="text" id="numCubo" placeholder="Ingrese un número">
+      <button onclick="calcularCubo()">Calcular cubo</button>
+    </div>
+
+    <!-- Problema 2 -->
+    <div class="card">
+      <h2>Problema 2</h2>
+      <p>Cargar dos números en objetos de tipo text y al presionar un botón, mostrar el mayor.</p>
+      <input type="text" id="num1" placeholder="Número 1">
+      <input type="text" id="num2" placeholder="Número 2">
+      <button onclick="mostrarMayor()">Mostrar mayor</button>
+    </div>
+
+    <!-- Problema 3 -->
+    <div class="card">
+      <h2>Problema 3</h2>
+      <p>Cargar un nombre y un apellido en sendos campos. Al presionar un botón, concatenarlos y mostrarlos en un tercer campo de texto.</p>
+      <input type="text" id="nombre" placeholder="Nombre">
+      <input type="text" id="apellido" placeholder="Apellido">
+      <button onclick="concatenar()">Concatenar</button>
+      <input type="text" id="resultado" placeholder="Resultado" readonly>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
